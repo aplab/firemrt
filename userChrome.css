@@ -1,0 +1,33 @@
+#TabsToolbar .tabbrowser-arrowscrollbox,
+#TabsToolbar .arrowscrollbox-scrollbox,
+#TabsToolbar .scrollbox-innerbox {
+  display: block !important;
+}
+
+.scrollbutton-up,
+.arrowscrollbox-overflow-start-indicator,
+.scrollbutton-down,
+.arrowscrollbox-overflow-end-indicator {
+  display: none !important;
+}
+
+.tabbrowser-tab {
+  min-height: var(--tab-min-height) !important;
+  vertical-align: bottom !important;
+}
+
+.tabbrowser-tab {
+    min-width: 150px !important;
+}   
+
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+  
+.tabbrowser-tab:not([pinned]):not(:hover) .tab-close-button {
+  visibility: collapse !important;
+}
+
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+  visibility: visible !important;
+  display: block !important;
+}
